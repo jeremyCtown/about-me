@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 var playTheGame = prompt('Hi! Welcome to my page! Do you want to play a game? Reply with Y of N.').toUpperCase();
 console.log("User entered " + playTheGame);
@@ -12,7 +12,7 @@ if (the user enters Y or YES) {
 } else (user enters nothing) {
     alert(sarcasm);
 } */
-
+/*
 if(playTheGame === 'Y') {
     alert('Thanks for playing! Let\'s go.');
 } else if (playTheGame === 'N') {
@@ -74,4 +74,4 @@ if(jeremyDog === 'Y') {
     alert('Trick question! I don\'t have any pets, which is a total bummer I know. Thanks for taking my quiz! Click OK to learn more about me.');
 } else {
     alert('You got it right! Trick question, I don\'t have any pets, which is a total bummer I know. Thanks for taking my quiz! Click OK to learn more about me.');
-}
+}*/
