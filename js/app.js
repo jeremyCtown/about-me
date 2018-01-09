@@ -32,7 +32,7 @@ if(jeremyAge === 'Y') {
     alert('Sometimes it\'s best not to answer ;) I\'m 33. Next question');
 }
 
-var jeremyHome =  prompt('Now you know that I\'m 33. Next, am I originally from the Pacific Northwest? Reply Y or N.').toUpperCase();
+var jeremyHome =  prompt('Now you know that I\'m 33 years old. Am I originally from the Pacific Northwest? Reply Y or N.').toUpperCase();
 console.log("User entered " + jeremyHome);
 
 if(jeremyHome === 'Y') {
@@ -43,15 +43,15 @@ if(jeremyHome === 'Y') {
     alert('I get it, geography is hard so you didn\'t have an answer. I\'m Cali-born, East Coast and Germany raised. Moving on!');
 }
 
-var jeremySchool =  prompt('You know I\'m 33 and that I\'m not from the PNW. Did I attend the University of Washington? Reply Y or N.').toUpperCase();
+var jeremySchool =  prompt('You know I\'m 33 and that I\'m a PNW transplant. Did I attend the University of Washington? Reply Y or N.').toUpperCase();
 console.log("User entered " + jeremySchool);
 
 if(jeremySchool === 'Y') {
-    alert('Yep! I moved to Washington to enroll in the Full-time MBA program at UW - GO DAWGS! Let\'s keep going.');
+    alert('Yep! I moved to Washington and attended the Full-time MBA program at UW - GO DAWGS! Let\'s keep going.');
 } else if (jeremySchool === 'N') {
-    alert('Even though I didn\'t grow up here, I moved to Washington for the MBA program at UW - GO DAWGS! Let\'s keep going.');
+    alert('Even though I didn\'t grow up here, I moved to Washington and attended the MBA program at UW - GO DAWGS! Let\'s keep going.');
 } else {
-    alert('Hmm... not answering tells me you must be a Washington State fan. I did my MBA at UW before starting this program - GO DAWGS! Let\'s keep going.');
+    alert('Hmm... not answering tells me you must be a Washington State fan. I did my MBA at UW before starting at Code Fellows- GO DAWGS! Let\'s keep going.');
 }
 
 var jeremyHobbies =  prompt('Ok so I\'m a 33 year old PNW transplant that attended UW. But I actually moved here for another reason... is that reason because I love outdoor activities? Reply Y or N.').toUpperCase();
@@ -60,7 +60,18 @@ console.log("User entered " + jeremyHobbies);
 if(jeremyHobbies === 'Y') {
     alert('Haha you caught me! School was ok but I really moved here so I could go snowboarding and backpacking in the beautiful PNW. One more question to go!');
 } else if (jeremyHobbies === 'N') {
-    alert('I appreciate the vote of confidence, but truthfully I moved here so I could spend all my freetime snowboarding and backpacking. One more question to go!');
+    alert('I appreciate the vote of confidence, but truthfully I moved here so I could spend all my free time snowboarding and backpacking. One more question to go!');
 } else {
-    alert('I get it...I\'d rather be snowboarding or backpacking than answering these questions, too. Only 1 more to go!');
+    alert('I get it...I\'d rather be snowboarding or backpacking than answering these questions, too. Only one more to go!');
+}
+
+var jeremyDog =  prompt('Ok so I\'m a 33 year old PNW transplant that attended UW and loves the outdoors. Final question: is my dog/best friend\'s name Bruce? Reply Y or N.').toUpperCase();
+console.log("User entered " + jeremyHobbies);
+
+if(jeremyDog === 'Y') {
+    alert('Trick question! I don\'t have any pets, which is a total bummer I know. Thanks for taking my quiz! Click OK to learn more about me.');
+} else if (jeremyDog === 'N') {
+    alert('Trick question! I don\'t have any pets, which is a total bummer I know. Thanks for taking my quiz! Click OK to learn more about me.');
+} else {
+    alert('You got it right! Trick question, I don\'t have any pets, which is a total bummer I know. Thanks for taking my quiz! Click OK to learn more about me.');
 }
