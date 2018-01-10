@@ -1,20 +1,35 @@
 body {
     background-color: rgb(107, 104, 104);
+    color: black;
     padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Garamond, Helvetica, sans-serif;
 }
 
 h1 {
     color:  rgb(241, 141, 10);
-    font-size: 40px;
+    font-size: 50px;
+    font-weight: bold;
     padding: inherit;
     margin: 0px;
+    text-shadow: 2px 2px 5px #111111;
 }
 h2 {
-    width: 600px;
+    width: 700px;
     color: white;
     background-color: rgb(241, 141, 10);
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    border: 5px outset rgb(199, 119, 15);
     padding: 5px;
     margin: 15px 0px 0px 20px;
+    text-shadow: 1px 1px 3px #666666;
+}
+
+p.one {
+    width: 650px;
+    font: arial;
+    padding: inherit;
+    font-weight: bold;
+    margin: 20px 0px 0px 10px;
+    font-size: 20px;
 }
