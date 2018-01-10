@@ -25,11 +25,15 @@ h2 {
     text-shadow: 1px 1px 3px #666666;
 }
 
-p.one {
+p {
     width: 650px;
     font: arial;
     padding: inherit;
     font-weight: bold;
-    margin: 20px 0px 0px 10px;
+    margin: 10px 0px 0px 10px;
     font-size: 20px;
+}
+
+p.one {
+    margin: 20px 0px 0px 10px;
 }
