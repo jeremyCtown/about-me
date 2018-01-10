@@ -2,16 +2,18 @@ body {
     background-color: rgb(107, 104, 104);
     color: black;
     padding: 20px;
-    font-family: Garamond, Helvetica, sans-serif;
+    font-family: Garamond, times, serif;
+    border: 0px;
 }
 
 h1 {
     color:  rgb(241, 141, 10);
     font-size: 50px;
     font-weight: bold;
-    padding: inherit;
+    padding: 20px;
     margin: 0px;
     text-shadow: 2px 2px 5px #111111;
+    border: 0px;
 }
 h2 {
     width: 700px;
@@ -25,15 +27,77 @@ h2 {
     text-shadow: 1px 1px 3px #666666;
 }
 
-p {
+h3 {
     width: 650px;
     font: arial;
-    padding: inherit;
+    padding: 20px;
+    border: 0px;
     font-weight: bold;
-    margin: 10px 0px 0px 10px;
+    margin: 20px 0px 0px 10px;
     font-size: 20px;
+    border: 0px;
 }
 
-p.one {
-    margin: 20px 0px 0px 10px;
+ul {
+    width: 650px;
+    font: arial;
+    padding: 0px 15px;
+    margin: 0px 0px 0px 20px;
+    font-size: 20px;
+    border: 0px;
+}
+
+ol {
+    width: 650px;
+    font: arial;
+    padding: 0px 15px;
+    margin: 0px 0px 0px 20px;
+    font-size: 20px;
+    border: 0px;
+}
+
+.topics {
+    width: 650px;
+    padding: 20px 20px 0px;
+    margin: 0px 0px 0px 10px;
+    border: 0px;
+    font: arial;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.family {
+    width: 650px;
+    font: arial;
+    padding: 0px;
+    margin: 0px 0px 0px 30px;
+    font-size: 20px;
+    border: 0px;
+}
+
+.embolden {
+    font-weight: bold;
+}
+
+.italics {
+    font-style: italic;
+}
+
+#schools {
+    width: 800px;
+}
+
+#travel {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+}
+
+#mountainView {
+    width: 675px;
+    height: 450px;
+    margin: 5px 10px 0px;
+    float: right;
+    box-shadow: 0px 0px 10px #111111;
 }

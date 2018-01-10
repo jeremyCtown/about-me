@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 var userName = prompt('Hi! Welcome to my page! What is your name?');
 console.log('User is named ' + userName);
@@ -15,7 +15,7 @@ if (the user enters Y or YES) {
 } else (user enters nothing) {
     alert(sarcasm);
 } */
-
+/*
 if(playTheGame === 'Y' || playTheGame === 'YES') {
     alert('Thanks for playing, ' + userName + '! Let\'s go.');
 } else if (playTheGame === 'N' || playTheGame === 'NO') {
