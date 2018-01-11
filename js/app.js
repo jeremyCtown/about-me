@@ -1,9 +1,11 @@
-/*'use strict';
+'use strict';
+
+var correctGuesses = 0;
 
 var userName = prompt('Hi! Welcome to my page! What is your name?');
 console.log('User is named ' + userName);
 
-var playTheGame = prompt('Hi! Welcome to my page, ' + userName + '! Do you want to play a game? Reply with Y of N.').toUpperCase();
+var playTheGame = prompt('Hi! Welcome to my page, ' + userName + '! Do you want to play a game? Reply with Y or N.').toUpperCase();
 console.log('Did ' + userName + ' choose to play the game? ' + playTheGame);
 
 /* PSEUDO CODE
@@ -15,7 +17,7 @@ if (the user enters Y or YES) {
 } else (user enters nothing) {
     alert(sarcasm);
 } */
-/*
+
 if(playTheGame === 'Y' || playTheGame === 'YES') {
     alert('Thanks for playing, ' + userName + '! Let\'s go.');
 } else if (playTheGame === 'N' || playTheGame === 'NO') {
@@ -31,6 +33,7 @@ if(jeremyAge === 'Y' || jeremyAge === 'YES') {
     alert('I wish ' + userName + '! I\'m 33 years old. Next question');
 } else if (jeremyAge === 'N') {
     alert('Good guess, ' + userName + '! I\'m 33 years young. Next question');
+    correctGuesses++
 } else {
     alert('Good call, ' + userName + '. Sometimes it\'s best not to answer ;) I\'m 33. Next question');
 }
@@ -57,17 +60,6 @@ if(jeremySchool === 'Y' || jeremySchool === 'YES') {
     alert(userName + '... not answering tells me you must be a Washington State fan. I did my MBA at UW before starting at Code Fellows- GO DAWGS! Let\'s keep going.');
 }
 
-var jeremyHobbies =  prompt('Ok so I\'m a 33 year old PNW transplant that attended UW. But ' + userName + ', I actually moved here for another reason... is that reason because I love outdoor activities? Reply Y or N.').toUpperCase();
-console.log('Did ' + userName + ' guess that I enjoy outdoor activities? ' + jeremyHobbies);
-
-if(jeremyHobbies === 'Y' || jeremyHobbies === 'YES') {
-    alert('Haha ' + userName + ', you caught me! School was ok but I really moved here so I could go snowboarding and backpacking in the beautiful PNW. Onwards!');
-} else if (jeremyHobbies === 'N' || jeremyHobbies === 'NO') {
-    alert('I appreciate the vote of confidence ' + userName + ', but truthfully I moved here so I could spend all my free time snowboarding and backpacking. Onwards!');
-} else {
-    alert('I totally get it ' + userName + '...I\'d rather be snowboarding or backpacking than answering these questions, too. Onwards!');
-}
-
 var jeremyPet =  prompt('Ok ' + userName + ', so I\'m a 33 year old PNW transplant that attended UW and loves the outdoors. Final question: Do I have any pets? Reply Y or N.').toUpperCase();
 console.log('What did ' + userName + ' guess about my pet ownership? '+ jeremyPet);
 
@@ -78,3 +70,26 @@ if(jeremyPet === 'Y' || jeremyPet === 'YES') {
 } else {
     alert('Hmm... ' + userName + ' must actually be a cat walking on a keyboard. Thanks Mr. Mittens for taking my quiz! Click OK to learn more about me.');
 }
+
+var userGuess = 0;
+var jeremyHobbies = ['snowboarding', 'backpacking', 'hiking', 'camping', 'traveling'];
+var flag = false;
+
+while(userGuess <6 && flag === false) {
+  var guessHobbies =  prompt('Ok ' +userName + ', I\'m a 33 year old PNW transplant that attended UW and I don\'t have any pets. Can you guess one of my hobbies?').toLowerCase();
+  userGuess++;
+  for(var i = 0; i < jeremyHobbies.length; i++) {
+    if(guessHobbies === jeremyHobbies[i]) {
+        alert('That\'s awesome, ' + userName + '! I love ' + jeremyHobbies[i] + ' and wish I could do it all the time! Let\'s head to my site where you can learn more about me.');
+        correctGuesses++;
+        flag = true;
+        console.log(userName + ' guessed ' + guessHobbies + ' and got the answer right.')
+        break;
+    } 
+} 
+    if (flag===false) {
+        alert('Nice guesses ' + userName + ', ' + guessHobbies + ' is not one of my main hobbies. Take another shot!')
+        console.log(userName + ' guessed ' + guessHobbies + ' and got the answer wrong.')
+    }
+}
+//alert('Thanks for taking my quiz about Me! You answered '+ correctGuesses + ' out of 7 questions correctly');
