@@ -1,25 +1,34 @@
 'use strict';
 
+//global variables go here
+
+//define functions
+
 //need to learn how to select multiple of the same code at once
 
 var userName = prompt('Welcome to my page! What is your name?');
 console.log('User is named ' + userName); //learn to console.log user response time
 
-var playTheGame = prompt('Hi ' + userName + ', want to play a game? Reply with Y or N.').toUpperCase();
-console.log('Did ' + userName + ' choose to play the game? ' + playTheGame);
+function toPlayTheGame () {
+  var playTheGame = prompt('Hi ' + userName + ', want to play a game? Reply with Y or N.').toUpperCase();
+  console.log('Did ' + userName + ' choose to play the game? ' + playTheGame);
 
-//need to learn how to accept only first letter in a string - subString()
-if(playTheGame === 'Y' || playTheGame === 'YES' || playTheGame === 'YEAH' || playTheGame === 'YEP' || playTheGame === 'SURE') {
-  alert('Thanks for playing, ' + userName + '. Let\'s go!');
+  //need to learn how to accept only first letter in a string - subString()
+  if(playTheGame === 'Y' || playTheGame === 'YES' || playTheGame === 'YEAH' || playTheGame === 'YEP' || playTheGame === 'SURE') {
+    alert('Thanks for playing, ' + userName + '. Let\'s go!');
 
-} else if (playTheGame === 'N' || playTheGame === 'NO' ||  playTheGame === 'NOPE' || playTheGame === 'NEGATORY' || playTheGame === 'NEGATIVE' || playTheGame === 'NO WAY') {
-  alert('That\'s too bad, ' + userName + '. Let\'s play anyway!');
-} else {
-  alert('Oh ' + userName + ', you little rebel :) On to the game!');
+  } else if (playTheGame === 'N' || playTheGame === 'NO' ||  playTheGame === 'NOPE' || playTheGame === 'NEGATORY' || playTheGame === 'NEGATIVE' || playTheGame === 'NO WAY') {
+    alert('That\'s too bad, ' + userName + '. Let\'s play anyway!');
+  } else {
+    alert('Oh ' + userName + ', you little rebel :) On to the game!');
+  }
 }
+
+toPlayTheGame();
 
 var correctGuesses = 0;
 
+//Question 1
 var jeremyAge = prompt('The game is guessing a few facts about me. First, am I 31 years old? Reply Y or N.').toUpperCase();
 console.log('Did ' + userName + ' think I am 31? ' + jeremyAge);
 
@@ -32,6 +41,7 @@ if(jeremyAge === 'Y' || jeremyAge === 'YES') {
   alert('Good call, ' + userName + '. Sometimes it\'s best not to guess a person\'s age :) I\'m 33. Next question.');
 }
 
+//Question 2
 var jeremyHome =  prompt('Well, ' + userName + ', now you know that I\'m 33 years old. Am I originally from the Pacific Northwest? Reply Y or N.').toUpperCase();
 console.log('Did ' + userName + ' guess that I am from the PNW? ' + jeremyHome);
 
@@ -44,6 +54,7 @@ if(jeremyHome === 'Y' || jeremyHome === 'YES') {
   alert('I get it, ' + userName + ', it\'s hard to make that call with such little data! I\'m Cali-born, East Coast and Germany raised. Moving on!');
 }
 
+//Question 3
 var jeremySchool =  prompt(userName + ', now you know I\'m 33 and I\'m not from the PNW. But did I attend the University of Washington? Reply Y or N.').toUpperCase();
 console.log('Did ' + userName + ' guess that I am a UW alumnus? ' + jeremySchool);
 
@@ -56,6 +67,7 @@ if(jeremySchool === 'Y' || jeremySchool === 'YES') {
   alert('Hmmmm... you must be a Washington State fan. I graduated with my MBA from UW before starting at Code Fellows- GO DAWGS! Let\'s keep going.');
 }
 
+//Question 4
 var jeremyHobbies =  prompt(userName + ', now you know I\'m a 33 year old PNW transplant that attended UW. But, I actually moved out here for another reason... is that reason because I love being outdoors? Reply Y or N').toUpperCase();
 console.log('What did ' + userName + ' guess about my love of the outdoors? ' + jeremyHobbies);
 
@@ -68,6 +80,7 @@ if(jeremyHobbies === 'Y' || jeremyHobbies === 'YES' || jeremyHobbies === 'YEAH' 
   alert('I totally get it... I\'d rather be snowboarding or backpacking than answering these questions, too. Onwards and upwards!');
 }
 
+//Question 5
 var jeremyPet =  prompt('Ok ' + userName + ', so I\'m a 33 year old PNW transplant that attended UW and loves being outside. Question five: Do I have any pets? Reply Y or N.').toUpperCase();
 console.log('What did ' + userName + ' guess about my pet ownership? ' + jeremyPet);
 
@@ -84,6 +97,7 @@ var userGuess1 = 0;
 var jeremyCountries = 13;
 var flag1 = false;
 
+//Question 6
 while(userGuess1 < 4 && flag1 === false) {
   var guessCountries =  parseInt(prompt('Ok ' + userName + ', I\'m a 33 year old PNW transplant that attended UW, loves being outside, and I don\'t have any pets. How many countries outside of the U.S. have I been to?'));
   //guessCountries= parseInt(guessCountries);
@@ -103,6 +117,8 @@ while(userGuess1 < 4 && flag1 === false) {
     alert('Sorry ' + userName + ', All out of guesses! I\'ve been to Germany, Italy, Spain, France, Holland, England, The Netherlands, Austria, Canada, Iraq, Kuwait, The Philippines, and Afghanistan.');
   }
 }
+
+//Question 7
 //figure out how to display proper nouns
 var userGuess2 = 0;
 var jeremyService = ['GERMANY', 'IRAQ', 'KUWAIT', 'THE PHILIPPINES' , 'AFGHANISTAN'];
@@ -130,4 +146,5 @@ while(userGuess2 < 6 && flag2 === false) {
 }
 alert('We\'re done ' + userName + '! Thanks for taking time to learn a little about me. You guessed correctly on ' + correctGuesses + ' out of 7 questions. Now let\'s head to my site where you can learn more about me.');
 
+//call functions
 

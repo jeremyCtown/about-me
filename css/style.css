@@ -6,6 +6,10 @@ body {
   border: 0px;
 }
 
+section {
+  width: 100%;
+}
+
 h1 {
   color:  rgb(241, 141, 10);
   font-size: 50px;
@@ -54,6 +58,7 @@ ol {
   margin: 0px 0px 0px 20px;
   font-size: 20px;
   border: 0px;
+  list-style-type: 'decimal';
 }
 
 .topics {
