@@ -3,7 +3,7 @@
 var userName = prompt('Hi! Welcome to my page! What is your name?');
 console.log('User is named ' + userName);
 
-var playTheGame = prompt('Hi! Welcome to my page, ' + userName + '! Do you want to play a game? Reply with Y or N.').toUpperCase();
+var playTheGame = prompt('Hi ' +userName + '! Welcome to my page. Do you want to play a game? Reply with Y or N.').toUpperCase();
 console.log('Did ' + userName + ' choose to play the game? ' + playTheGame);
 
 if(playTheGame === 'Y' || playTheGame === 'YES') {
@@ -52,7 +52,7 @@ if(jeremySchool === 'Y' || jeremySchool === 'YES') {
     alert(userName + '... not answering tells me you must be a Washington State fan. I did my MBA at UW before starting at Code Fellows- GO DAWGS! Let\'s keep going.');
 }
 
-var jeremyArmy =  prompt(userName + ', not you know I\'m 33 and I\'m not from the PNW but I went to UW. Next question: am I a Veteran? Reply Y or N.').toUpperCase();
+var jeremyArmy =  prompt(userName + ', now you know I\'m 33 and I\'m not from the PNW but I went to UW. Next question: am I a Veteran? Reply Y or N.').toUpperCase();
 console.log('What did ' + userName + ' guess about my military service? '+ jeremyArmy);
 
 if(jeremyArmy === 'Y' || jeremyArmy === 'YES') {
@@ -76,28 +76,55 @@ if(jeremyPet === 'Y' || jeremyPet === 'YES') {
     alert('Hmm... ' + userName + ' must actually be a cat walking on a keyboard. Does Mr. Mittens want to come live with me? Onwards!');
 }
 
+var userGuess1 = 0;
+var jeremyCountries = 12;
+var flag1 = false;
+
+while(userGuess1 <4 && flag1 === false) {
+  var guessCountries =  prompt('Ok ' +userName + ', I\'m a 33 year old PNW transplant that attended UW and served in the Army. How many countries outside of the U.S. have I been to?');
+  guessCountries= parseInt(guessCountries);
+  userGuess1++; {
+  if(guessCountries === jeremyCountries) {
+        alert('How did you know? Good job ' + userName + '. I\'ve been to Germany, Italy, Spain, France, Holland, England, The Netherlands, Austria, Canada, The Philippines, Iraq, and Afghanistan. Only one more question to go!');
+        correctGuesses++;
+        flag1 = true;
+        console.log(userName + ' guessed ' + guessCountries + ' and got the answer right.');
+    } else if (flag1 === false && guessCountries < jeremyCountries && userGuess1 < 4) {
+        alert('Nice guess ' + userName + ', but ' + guessCountries + ' is not correct. Try a higher number!');
+        console.log(userName + ' guessed ' + guessCountries + ' and got the answer wrong.');
+        continue;
+    } else if (flag1 === false && guessCountries > jeremyCountries && userGuess1 <4) {
+        alert('Nice guess ' + userName + ', but ' + guessCountries + ' is not correct. Try a lower number!');
+        console.log(userName + ' guessed ' + guessCountries + ' and got the answer wrong.');
+        continue;
+    } if (flag1 === false && userGuess1 === 4) {
+        alert('Sorry ' + userName + ', All out of guesses! I\'ve been to 12 countries outside of the U.S - Germany, Italy, Spain, France, Holland, England, The Netherlands, Austria, Canada, The Philippines, Iraq, and Afghanistan.');
+    }
+}
+
 var userGuess2 = 0;
 var jeremyHobbies = ['snowboarding', 'backpacking', 'hiking', 'camping', 'traveling'];
-var flag = false;
+var flag2 = false;
 
-while(userGuess <6 && flag === false) {
+while(userGuess2 <6 && flag2 === false) {
   var guessHobbies =  prompt('Ok ' +userName + ', I\'m a 33 year old PNW transplant that attended UW, served in the Army, doesn\'t have any pets, and I\'ve been to 12 countries. Can you guess one of my hobbies? HINT: they all end with \"-ing\"').toLowerCase();
   userGuess2++;
   for(var i = 0; i < jeremyHobbies.length; i++) {
     if(guessHobbies === jeremyHobbies[i]) {
         alert('Another one right, ' + userName + ' that\'s awesome! I love ' + jeremyHobbies[i] + ' and wish I could do it all of the time.');
         correctGuesses++;
-        flag = true;
+        flag2 = true;
         console.log(userName + ' guessed ' + guessHobbies + ' and got the answer right.')
         break;
     } 
 } 
-    if (flag===false) {
+    if (flag2===false) {
         alert('Nice guess ' + userName + ', but ' + guessHobbies + ' is not one of my main hobbies. Take another shot!')
         console.log(userName + ' guessed ' + guessHobbies + ' and got the answer wrong.')
     }
-    if (flag===false && userGuess2===6) {
+    if (flag2===false && userGuess2===6) {
         alert('That\'s enough guesses for one day. My hobbies are snowboarding, backpacking, hiking, camping, and traveling.');
     }
 }
 alert(userName + ', thanks for taking my quiz! You answered '+ correctGuesses + ' out of 7 questions correctly. Now let\'s head to my site where you can learn more about me.');
+}
