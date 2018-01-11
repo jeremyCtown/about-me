@@ -52,7 +52,19 @@ if(jeremySchool === 'Y' || jeremySchool === 'YES') {
     alert(userName + '... not answering tells me you must be a Washington State fan. I did my MBA at UW before starting at Code Fellows- GO DAWGS! Let\'s keep going.');
 }
 
-var jeremyPet =  prompt('Ok ' + userName + ', so I\'m a 33 year old PNW transplant that attended UW. Question four: Do I have any pets? Reply Y or N.').toUpperCase();
+var jeremyArmy =  prompt(userName + ', not you know I\'m 33 and I\'m not from the PNW but I went to UW. Next question: am I a Veteran? Reply Y or N.').toUpperCase();
+console.log('What did ' + userName + ' guess about my military service? '+ jeremyArmy);
+
+if(jeremyArmy === 'Y' || jeremyArmy === 'YES') {
+    alert('That\'s correct ' + userName + ' I am a Veteran of the U.S. Army, with 3 combat tours under my belt. Don\'t be scared, I\'m a big teddy bear :) Next question!');
+    correctGuesses++;
+} else if (jeremyArmy === 'N' || jeremyArmy === 'NO') {
+    alert('Surprise ' + userName + '! I am a Veteran of the U.S. Army, with 3 combat tours under my belt. Don\'t be scared, I\'m a big teddy bear :) Next question!');
+} else {
+    alert('YOU DIDN\'T ANSWER THE QUESTION SOLDIER! DO PUSHUPS!!...umm, I mean... Sorry ' + userName + ', reflexes :) Let\'s just move to the next question.');
+}
+
+var jeremyPet =  prompt('Ok ' + userName + ', so I\'m a 33 year old PNW transplant that attended UW and served in the Army. Question five: Do I have any pets? Reply Y or N.').toUpperCase();
 console.log('What did ' + userName + ' guess about my pet ownership? '+ jeremyPet);
 
 if(jeremyPet === 'Y' || jeremyPet === 'YES') {
@@ -64,13 +76,13 @@ if(jeremyPet === 'Y' || jeremyPet === 'YES') {
     alert('Hmm... ' + userName + ' must actually be a cat walking on a keyboard. Does Mr. Mittens want to come live with me? Onwards!');
 }
 
-var userGuess = 0;
+var userGuess2 = 0;
 var jeremyHobbies = ['snowboarding', 'backpacking', 'hiking', 'camping', 'traveling'];
 var flag = false;
 
 while(userGuess <6 && flag === false) {
   var guessHobbies =  prompt('Ok ' +userName + ', I\'m a 33 year old PNW transplant that attended UW, served in the Army, doesn\'t have any pets, and I\'ve been to 12 countries. Can you guess one of my hobbies? HINT: they all end with \"-ing\"').toLowerCase();
-  userGuess++;
+  userGuess2++;
   for(var i = 0; i < jeremyHobbies.length; i++) {
     if(guessHobbies === jeremyHobbies[i]) {
         alert('Another one right, ' + userName + ' that\'s awesome! I love ' + jeremyHobbies[i] + ' and wish I could do it all of the time.');
@@ -84,7 +96,7 @@ while(userGuess <6 && flag === false) {
         alert('Nice guess ' + userName + ', but ' + guessHobbies + ' is not one of my main hobbies. Take another shot!')
         console.log(userName + ' guessed ' + guessHobbies + ' and got the answer wrong.')
     }
-    if (flag===false && userGuess===6) {
+    if (flag===false && userGuess2===6) {
         alert('That\'s enough guesses for one day. My hobbies are snowboarding, backpacking, hiking, camping, and traveling.');
     }
 }
