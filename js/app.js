@@ -36,7 +36,7 @@ var jeremyHome =  prompt('Well, ' + userName + ', now you know that I\'m 33 year
 console.log('Did ' + userName + ' guess that I am from the PNW? ' + jeremyHome);
 
 if(jeremyHome === 'Y' || jeremyHome === 'YES') {
-    alert('That would be cool, ' + userName + ', but unfortunately no. I was born in California and lived most of my life in eastern U.S. and  Germany. Moving on!');
+    alert('That would be cool, ' + userName + ', but unfortunately no. I was born in California and lived most of my life in eastern U.S. and Germany. Moving on!');
 } else if (jeremyHome === 'N' || jeremyHome === 'NO') {
     alert('You\'re right, ' + userName + '! I was born in California but spent most of my life in the eastern U.S and Germany. Moving on!');
     correctGuesses++;
@@ -61,6 +61,7 @@ console.log('What did ' + userName + ' guess about my love of the outdoors? '+ j
 
 if(jeremyHobbies === 'Y' || jeremyHobbies === 'YES'|| jeremyHobbies ==='YEAH' || jeremyHobbies ==='YEP' || jeremyHobbies ==='SURE') {
     alert('Haha, you caught me ' +userName + '! School was an ok reason but I really moved here so I could go snowboarding and backpacking in the beautiful PNW. Onwards and upwards!');
+    correctGuesses++;
 } else if (jeremyHobbies === 'N' || jeremyHobbies === 'NO') {
     alert('UW has a good MBA program but truthfully I moved here so I could spend all my free time snowboarding and backpacking. Onwards and upwards!');
 } else {
@@ -84,9 +85,9 @@ var jeremyCountries = 13;
 var flag1 = false;
 
 while(userGuess1 <4 && flag1 === false) {
-  var guessCountries =  prompt('Ok ' +userName + ', I\'m a 33 year old PNW transplant that attended UW and served in the Army. How many countries outside of the U.S. have I been to?');
-  guessCountries= parseInt(guessCountries);
-  userGuess1++; {
+  var guessCountries =  parseInt(prompt('Ok ' +userName + ', I\'m a 33 year old PNW transplant that attended UW, loves being outside, and I don\'t have any pets. How many countries outside of the U.S. have I been to?'));
+  //guessCountries= parseInt(guessCountries);
+  userGuess1++; 
   if(guessCountries === jeremyCountries) {
         alert('How did you know? Good job ' + userName + '. I\'ve been to Germany, Italy, Spain, France, Holland, England, The Netherlands, Austria, Canada, Iraq, Kuwait, The Philippines, and Afghanistan. Only one more question to go!');
         correctGuesses++;
@@ -128,6 +129,5 @@ while(userGuess2 <6 && flag2 === false) {
     }
 }
 alert('We\'re done '+ userName + '! Thanks for taking time to learn a little about me. You guessed correctly on '+ correctGuesses + ' out of 7 questions. Now let\'s head to my site where you can learn more about me.');
-break;
-}
+
 
