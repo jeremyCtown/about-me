@@ -96,7 +96,7 @@ while(userGuess1 <4 && flag1 === false) {
     } else if (flag1 === false && guessCountries < jeremyCountries && userGuess1 < 4) {
         alert('Nice guess ' + userName + ', but ' + guessCountries + ' is not correct. Try a higher number!');
         console.log(userName + ' guessed ' + guessCountries + ' and got the answer wrong.');
-    } else if (flag1 === false && guessCountries > jeremyCountries && userGuess1 <4) {
+    } else if (flag1 === false && guessCountries > jeremyCountries && userGuess1 < 4) {
         alert('Nice guess ' + userName + ', but ' + guessCountries + ' is not correct. Try a lower number!');
         console.log(userName + ' guessed ' + guessCountries + ' and got the answer wrong.');
     } if (flag1 === false && userGuess1 === 4) {
@@ -113,7 +113,7 @@ while(userGuess2 <6 && flag2 === false) {
   userGuess2++;
   for(var i = 0; i < jeremyService.length; i++) {
     if(guessService === jeremyService[i]) {
-        alert('Another one right, ' + userName + ' that\'s awesome! Yes, I spent time in ' + guessService + ' during my 6 years in the Army, and I appreciated the opportunity to do so. And guess what?');
+        alert('Another one right, ' + userName + ' that\'s awesome! Yes, I spent time in ' + guessService + ' during my 6 years in the Army, and I appreciated the opportunity to do so. And guess what? Click Ok');
         correctGuesses++;
         flag2 = true;
         console.log(userName + ' guessed ' + guessService + ' and got the answer right.');
@@ -125,7 +125,7 @@ while(userGuess2 <6 && flag2 === false) {
         console.log(userName + ' guessed ' + guessService + ' and got the answer wrong.');
     }
     if (flag2===false && userGuess2===6) {
-        alert('That\'s enough guesses for one day. The countries the Army had me spend time in are Kuwait, Iraq, Afghanistan, Germany, and The Philippines. And guess what? Hit Ok');
+        alert('That\'s enough guesses for one day. The countries the Army had me spend time in are Kuwait, Iraq, Afghanistan, Germany, and The Philippines. And guess what? Click Ok');
     }
 }
 alert('We\'re done '+ userName + '! Thanks for taking time to learn a little about me. You guessed correctly on '+ correctGuesses + ' out of 7 questions. Now let\'s head to my site where you can learn more about me.');
