@@ -1,23 +1,16 @@
 'use strict';
 
-//global variables go here
-
-//define functions
-
-//need to learn how to select multiple of the same code at once
 var correctGuesses = 0;
 
 var userName = prompt('Welcome to my page! What is your name?');
-console.log('User is named ' + userName); //learn to console.log user response time
+console.log('User is named ' + userName);
 
 function toPlayTheGame () {
   var playTheGame = prompt('Hi ' + userName + ', want to play a game? Reply with Y or N.').toUpperCase();
   console.log('Did ' + userName + ' choose to play the game? ' + playTheGame);
 
-  //need to learn how to accept only first letter in a string - subString()
   if(playTheGame === 'Y' || playTheGame === 'YES' || playTheGame === 'YEAH' || playTheGame === 'YEP' || playTheGame === 'SURE') {
     alert('Thanks for playing, ' + userName + '. Let\'s go!');
-
   } else if (playTheGame === 'N' || playTheGame === 'NO' ||  playTheGame === 'NOPE' || playTheGame === 'NEGATORY' || playTheGame === 'NEGATIVE' || playTheGame === 'NO WAY') {
     alert('That\'s too bad, ' + userName + '. Let\'s play anyway!');
   } else {
@@ -107,8 +100,8 @@ function guessNumberCountries() {
 
   while(userGuess1 < 4 && flagCountries === false) {
     var guessCountries =  parseInt(prompt('Ok ' + userName + ', I\'m a 33 year old PNW transplant that attended UW, loves being outside, and I don\'t have any pets. How many countries outside of the U.S. have I been to?'));
-    //guessCountries= parseInt(guessCountries);
     userGuess1++;
+
     if(guessCountries === jeremyCountries) {
       alert('How did you know? Good job ' + userName + '. I\'ve been to Germany, Italy, Spain, France, Holland, England, The Netherlands, Austria, Canada, Iraq, Kuwait, The Philippines, and Afghanistan. Only one more question to go!');
       correctGuesses++;
@@ -128,10 +121,8 @@ function guessNumberCountries() {
   }
 }
 
-
 //Question 7
 function guessService() {
-//figure out how to display proper nouns
   var userGuess2 = 0;
   var jeremyService = ['GERMANY', 'IRAQ', 'KUWAIT', 'THE PHILIPPINES' , 'AFGHANISTAN'];
   var flagService = false;
@@ -141,7 +132,7 @@ function guessService() {
     userGuess2++;
     for(var i = 0; i < jeremyService.length; i++) {
       if(guessService === jeremyService[i]) {
-        alert('Another one right, ' + userName + ' that\'s awesome! I spent time in  Germany, Iraq, Kuwait, The Philippines , Afghanistan during my time in the Army, and I appreciated the opportunity to do so. And guess what? Click Ok');
+        alert('Another one right, ' + userName + ' that\'s awesome! I spent time in  Germany, Iraq, Kuwait, The Philippines, and Afghanistan during my time with the Army, and I appreciated the opportunity to do so. Now guess what? Click Ok');
         correctGuesses++;
         flagService = true;
         console.log(userName + ' guessed ' + guessService + ' and got the answer right.');
@@ -153,7 +144,7 @@ function guessService() {
       console.log(userName + ' guessed ' + guessService + ' and got the answer wrong.');
     }
     if (flagService === false && userGuess2 === 6) {
-      alert('That\'s enough guesses for one day. The countries the Army had me spend time in are Kuwait, Iraq, Afghanistan, Germany, and The Philippines. And guess what? Click Ok');
+      alert('That\'s enough guesses for one day. The countries the Army had me spend time in are Kuwait, Iraq, Afghanistan, Germany, and The Philippines. Now guess what? Click Ok');
     }
   }
 }
@@ -170,3 +161,14 @@ guessPet();
 guessNumberCountries();
 guessService();
 closingScore();
+
+
+
+
+//Personal notes - DO NOT DELETE
+//global variables go at the top of the page
+//need to learn how to select multiple instances of the same code string at once
+//learn to console.log user response time
+//need to learn how to only accept the first letter in a string - subString()
+//guessCountries = parseInt(guessCountries) === var guessCountries(parseInt(prompt('')))
+//figure out how to identify and display proper nouns from user input
