@@ -1,10 +1,11 @@
 'use strict';
 
-var correctGuesses = 0;
+var correctGuesses = 0, userName;
 
-var userName = prompt('Welcome to my page! What is your name?');
-console.log('User is named ' + userName);
-
+function getUserName() {
+  userName = prompt('Welcome to my page! What is your name?');
+  console.log('User is named ' + userName);
+}
 function toPlayTheGame () {
   var playTheGame = prompt('Hi ' + userName + ', want to play a game? Reply with Y or N.').toUpperCase();
   console.log('Did ' + userName + ' choose to play the game? ' + playTheGame);
@@ -132,7 +133,7 @@ function guessService() {
     userGuess2++;
     for(var i = 0; i < jeremyService.length; i++) {
       if(guessService === jeremyService[i]) {
-        alert('Another one right, ' + userName + ' that\'s awesome! I spent time in  Germany, Iraq, Kuwait, The Philippines, and Afghanistan during my time with the Army, and I appreciated the opportunity to do so. Now guess what? Click Ok');
+        alert('Another one right, ' + userName + ' that\'s awesome! I spent time in Germany, Iraq, Kuwait, The Philippines, and Afghanistan during my time with the Army, and I appreciated the opportunity to do so. Now guess what? Click Ok');
         correctGuesses++;
         flagService = true;
         console.log(userName + ' guessed ' + guessService + ' and got the answer right.');
@@ -152,6 +153,8 @@ function guessService() {
 function closingScore() {
   alert('We\'re done ' + userName + '! Thanks for taking time to learn a little about me. You guessed correctly on ' + correctGuesses + ' out of 7 questions. Now let\'s head to my site where you can learn more about me.');
 }
+
+getUserName();
 toPlayTheGame();
 guessAge();
 guessHome();

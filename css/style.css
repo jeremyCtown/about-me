@@ -58,7 +58,8 @@ ol {
   margin: 0px 0px 0px 20px;
   font-size: 20px;
   border: 0px;
-  list-style-type: 'decimal';
+  list-style-type: decimal;
+  list-style-position: inside;
 }
 
 .topics {
