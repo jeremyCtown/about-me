@@ -73,6 +73,14 @@ ol {
   text-decoration: underline;
 }
 
+.menu {
+   display: inline;
+   padding: 0 30px;
+   margin: -20px, 0;
+   font: times;
+
+}
+
 .family {
   width: 650px;
   font: arial;
@@ -88,6 +96,17 @@ ol {
 
 .italics {
   font-style: italic;
+}
+
+#nav-bar {
+  width: 90%;
+  font: times;
+  padding: 0px 15px 10px;
+  margin: -40px 0px 0px 0px;
+  font-size: 20px;
+  border: 0px;
+  text-align: right;
+
 }
 
 #schools {
