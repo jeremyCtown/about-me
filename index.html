@@ -8,20 +8,24 @@
   </head>
 
   <body>
-    <h1>Welcome to Jeremy's Place</h1>
+    <h1 id= "home">Welcome to Jeremy's Place</h1>
+    <nav></nav>
     <ul id="nav-bar">
-      <li class="menu">Home</li>
-      <li class="menu">General</li>
-      <li class="menu">Education</li>
-      <li class="menu">Travel</li>
+      <li class="menu"><a href="#top" id="nav-channels">Home</a></li>
+      <li class="menu"><a href="#general-header" id="nav-channels">General</a></li>
+      <li class="menu"><a href="#schools" id="nav-channels">Education</a></li>
+      <li class="menu"><a href="#list-group" id="nav-channels">Travel</a></li>
     </ul>
+    </nav>
+
     <hr />
     <img src="images/mountain-view.jpg" id= "mountainView" alt= " A beautiful view of Glacier Peak" />
+    
     <h2>...where taking a break to enjoy the view is a way of life</h2>
     
     <h3> Hello, and thanks for visiting my webpage. I hope this provides some valuable insight into me as a person and a potential future teammate.</h3>
 
-    <h3 class="topics">General Information About Me</h3>
+    <h3 class="topics" id= "general-header">General Information About Me</h3>
     <ul id="genStuff">
       <li><span class="embolden">Age:</span> 33 years old</li>
       <li><span class="embolden">Birthplace:</span> Monterey, CA</li>
@@ -44,20 +48,29 @@
       <li><span class="embolden">Graduate studies:</span> University of Washington,<span class="italics"> Master of Business Administration - 2017</span> </li>
       <li><span class="embolden">Programming:</span> Code Fellows,<span class="italics"> HTML/CSS/JS - 2018</span></li>
     </ul>
-<br>
-    <h3 class="topics" id="travel">Top 10 Places I Want to Visit</h3>
-    <ol id="travel">
-      <li><span class="embolden">Costa Rica</span></li>
-      <li><span class="embolden">Thailand</span></li>
-      <li><span class="embolden">Australia</span></li>
-      <li><span class="embolden">Japan</span></li>
-      <li><span class="embolden">Peru</span></li>
-      <li><span class="embolden">Scotland</span></li>
-      <li><span class="embolden">Argentina</span></li>
-      <li><span class="embolden">Brazil</span></li>
-      <li><span class="embolden">China</span></li>
-      <li><span class="embolden">Antarctica</span></li>
+
+    <br />
+    <hr />
+    <br />
+
+    <div id="list-group">
+    <h3 class="topics" id="travel-header">Top 10 Countries I Want to Visit</h3>
+    <ol id="travel-list">
+      <li><img src="images/costa-rica.jpg" alt= "Costa Rica" class="country"><span class="embolden">  1. Costa Rica</span></li>
+      <li><img src="images/thailand.jpg" alt= "Thailand" class="country"><span class="embolden">  2. Thailand</span></li>
+      <li><img src="images/australia.jpg" alt= "Australia" class="country"><span class="embolden"> 3.  Australia</span></li>
+      <li><img src="images/japan.jpg" alt= "Japan" class="country"><span class="embolden">  4. Japan</span></li>
+      <li><img src="images/peru.jpg" alt= "Peru" class="country"><span class="embolden">  5. Peru</span></li>
+      <li><img src="images/scotland.jpg" alt= "Scotland" class="country"><span class="embolden">  6. Scotland</span></li>
+      <li><img src="images/argentina.jpg" alt= "Argentina" class="country"><span class="embolden">  7. Argentina</span></li>
+      <li><img src="images/brazil.jpg" alt= "Brazil" class="country"><span class="embolden">  8. Brazil</span></li>
+      <li><img src="images/china.jpg" alt= "China" class="country"><span class="embolden">  9. China</span></li>
+      <li><img src="images/russia.jpg" alt= "Russia" class="country"><span class="embolden">  10. Russia</span></li>
     </ol>
-    <script type="text/javascript" src="js/app.js"></script>
+    </div>
+
+    <p id="bottomOfPage"><a href="#top">"Home"</a></p>
+
+    <!--<script type="text/javascript" src="js/app.js"></script> -->
   </body>
 </html>

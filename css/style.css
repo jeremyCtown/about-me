@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(107, 104, 104);
+  background-color: rgb(136, 136, 136);
   color: black;
   padding: 20px;
   font-family: Garamond, times, serif;
@@ -11,7 +11,7 @@ section {
 }
 
 h1 {
-  color:  rgb(241, 141, 10);
+  color:  rgb(255, 153, 19);
   font-size: 50px;
   font-weight: bold;
   padding: 20px;
@@ -19,6 +19,7 @@ h1 {
   text-shadow: 2px 2px 5px #111111;
   border: 0px;
 }
+
 h2 {
   width: 700px;
   color: white;
@@ -52,14 +53,19 @@ ul {
 }
 
 ol {
-  width: 650px;
+  width: 100%;
+  height: 400px;
   font: arial;
-  padding: 0px 15px;
+  padding: 20px 15px;
   margin: 0px 0px 0px 20px;
   font-size: 20px;
   border: 0px;
-  list-style-type: decimal;
-  list-style-position: inside;
+}
+
+ol li{
+  display: inline;
+  width: 25%;
+  float: left;
 }
 
 .topics {
@@ -78,7 +84,7 @@ ol {
    padding: 0 30px;
    margin: -20px, 0;
    font: times;
-
+   text-shadow: -1px -1px 0px #000000;
 }
 
 .family {
@@ -98,6 +104,11 @@ ol {
   font-style: italic;
 }
 
+.country {
+  width: 150px;
+  height: 100px;
+}
+
 #nav-bar {
   width: 90%;
   font: times;
@@ -106,23 +117,46 @@ ol {
   font-size: 20px;
   border: 0px;
   text-align: right;
+}
 
+#nav-channels{
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
 }
 
 #schools {
   width: 800px;
 }
 
-#travel {
-  width: 100%;
-  text-align: center;
-  padding: 20px 0px 0px 0px;
-}
-
 #mountainView {
   width: 675px;
   height: 450px;
-  margin: 5px 10px 0px;
+  margin: 5px 0px 0px 10px;
   float: right;
   box-shadow: 0px 0px 10px #111111;
+}
+
+#list-group {
+  background-color: rgb(96, 97, 105);
+  border: 10px inset rgb(173, 173, 173)
+}
+
+#travel-header {
+  width: 90%;
+  text-align: center;
+  font-style: garamond;
+  font-size: 30px;
+  color: rgb(36, 57, 253);
+  text-shadow: 2px 2px 7px #111111;
+  text-decoration: none
+}
+
+#travel-list {
+  color: rgb(236, 236, 236);
+}
+
+#bottomOfPage {
+  font-size: 15px;
+  font-weight: bold;
 }
