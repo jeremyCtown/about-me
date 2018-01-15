@@ -1,9 +1,16 @@
 # Project #1: About Me
 Week 1 About Me project for Code 201
 
+
+This project is a webpage about me. 
+
+All images are personally owned or open source from https://www.pexels.com
+
+CSS Reset courtesy of http://meyerweb.com/eric/tools/css/reset/ 
+
 ## Day 1
 
-didn't do anything for this one
+Didn't do anything for this project
 
 ## Day 2
 
@@ -21,3 +28,4 @@ Changed response on question 7 to include all array items.
 Chilled! 
 
 ## Day 5
+Final edits and styling
